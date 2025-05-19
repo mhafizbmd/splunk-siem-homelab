@@ -46,7 +46,8 @@ To enable smooth workflow and local web access:
   ```spl
   index=* source="/var/log/auth.log"
 
-```
+
+## ```
 Port Forwarding Setup
 +------------------------+      +------------------------------+
 | Host (Windows)         |      | Ubuntu Server VM (Splunk)   |
