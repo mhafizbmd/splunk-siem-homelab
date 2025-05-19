@@ -8,5 +8,4 @@ Successfully completed the foundational setup of a Splunk Enterprise-based SIEM 
 ✅ Log Simulation: Generated test events using logger to mimic suspicious activity such as failed logins.
 ✅ Log Verification: Validated that simulated events were successfully ingested and searchable in Splunk Web.
 ✅ SPL Exploration: Began using SPL (Search Processing Language) for basic querying and analysis.
-
 ✅ Documentation: Captured and organized setup progress with screenshots and uploaded to GitHub for public reference.
