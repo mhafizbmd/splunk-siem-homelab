@@ -58,7 +58,38 @@ To enable smooth workflow and local web access:
 | 127.0.0.1:8000         | <--> | Splunk Web UI (8000)         |
 +------------------------+      +------------------------------+
 ```
-Screenshots
+## 📸 Screenshots
+
+### Splunk-cli-log-sim
+![image](https://github.com/user-attachments/assets/db258e74-0332-4c1c-a9f2-6d30b075194a)
+
+### Login on local UI
+![image](https://github.com/user-attachments/assets/a67efd82-456d-49a7-b37c-487ecd2bca81)
+
+### Log Ingestion in Splunk UI Successful!
+![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
+
+### Host - splunk-server VM
+![image](https://github.com/user-attachments/assets/8b2f88b3-05d1-4f19-a59f-cdca0269b93a)
+Host: hostname, ip address, or fully qualified domain name of machine from which event originated
+![image](https://github.com/user-attachments/assets/ffbd2da3-60b6-480f-859f-5ed565ce933d)
+Sources: File/directory path, network path or script where event originate from
+![image](https://github.com/user-attachments/assets/5dab44bb-dbe3-429c-bc37-62aa1e86f501)
+Sourcetypes: Classification of data
+
+
+
+## 🔗 Author
+
+[Hafiz Daud](https://www.linkedin.com/in/muhdhafizdaud/)
+
+
+
+
+
+
+
+
 1. Splunk Enterprise Setup & Login via Host Browser
 Displays the sequence of launching the web interface after boot and login.
 
