@@ -83,7 +83,7 @@ This confirms:
 - Port forwarding is functioning as expected.
 - The data pipeline from syslog (/var/log/auth.log) to the Splunk index is operational.
 
-### Host - splunk-server VM
+### 4.Splunk Search Data Summary
 ![image](https://github.com/user-attachments/assets/8b2f88b3-05d1-4f19-a59f-cdca0269b93a)
 Host: hostname, ip address, or fully qualified domain name of machine from which event originated
 ![image](https://github.com/user-attachments/assets/ffbd2da3-60b6-480f-859f-5ed565ce933d)
