@@ -67,7 +67,7 @@ This screenshot shows the CLI interface of the Ubuntu Server where Splunk is run
 - Log events were simulated using the `logger` command.
 
 ![CLI – Port & Log Check](screenshots/ssh-cli-log-sim.png.jpg)
-![CLI](screenshots/ssh-cli-log-sim.png.jpg)
+![CLI](screenshots/ssh-cli-log-sim.jpg)
 
 
 
