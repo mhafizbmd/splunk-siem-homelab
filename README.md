@@ -24,6 +24,9 @@ This home lab sets up Splunk Enterprise on Ubuntu Server using VirtualBox. It si
 ### Log Ingestion in Splunk UI Successful!
 ![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
 
+### Host - splunk-server (VM)
+![image](https://github.com/user-attachments/assets/8b2f88b3-05d1-4f19-a59f-cdca0269b93a)
+
 
 ## 🔗 Author
 
