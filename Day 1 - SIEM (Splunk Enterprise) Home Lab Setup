@@ -48,7 +48,6 @@ To enable smooth workflow and local web access:
 
 ---
 
-
 ## Port Forwarding Setup
 +-----------------------+           +---------------------------+
 |     Host (Windows)    |           |  Ubuntu Server VM (Splunk)|
@@ -57,4 +56,13 @@ To enable smooth workflow and local web access:
 |                       | 2222→22   | - SSH                      |
 | 127.0.0.1:8000        | <-------> | - Splunk Web UI (8000)     |
 +-----------------------+           +---------------------------+
+
+## 📸 Screenshots
+
+### 1. Splunk CLI – Log & Port Monitoring
+![CLI](screenshots/ssh-cli-log-sim.png.jpg)
+
+### 2. Splunk Web Interface – Logged In Successfully
+![Web UI](screenshots/Splunk.jpg)
+
 
