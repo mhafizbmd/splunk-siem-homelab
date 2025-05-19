@@ -46,6 +46,19 @@ To enable smooth workflow and local web access:
   ```spl
   index=* source="/var/log/auth.log"
 
+```
+Port Forwarding Setup
++------------------------+      +------------------------------+
+| Host (Windows)         |      | Ubuntu Server VM (Splunk)   |
+|                        |      |                              |
+| PowerShell + Browser   | <--> | NAT Interface                |
+|                        |      | 2222→22  | 8000→8000         |
+| 127.0.0.1:8000         | <--> | Splunk Web UI (8000)         |
++------------------------+      +------------------------------+
+```
+
+
+
 Port Forwarding Setup
 +------------------------+        +------------------------------+
 |      Host (Windows)    |        |    Ubuntu Server VM (Splunk) |
