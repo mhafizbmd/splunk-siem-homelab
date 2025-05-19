@@ -69,13 +69,22 @@ To enable smooth workflow and local web access:
 ![image](https://github.com/user-attachments/assets/a67efd82-456d-49a7-b37c-487ecd2bca81)
 ![Splunk](screenshots/Splunk%20.jpg)
 
-Displays the sequence of launching the web interface after boot and login.
+### Splunk Web Interface – Boot to Login Workflow
+Displays the sequence from launching the Splunk Web interface after boot to a successful login.
+This confirms:
 - Splunk Web UI is accessible from the host browser.
-- Port forwarding is working (127.0.0.1:8000).
-- Admin credentials were successfully used.
+- Port forwarding is working correctly (`127.0.0.1:8000`).
+- Admin credentials were successfully used to log in.
+
 
 ### 3.Log Ingestion in Splunk UI Successful!
 ![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
+## Splunk Web Interface – Successful Login & Log Ingestion Verified
+This confirms:
+- Test logs were successfully ingested into Splunk.
+- Ingested events are searchable via the Splunk UI.
+- Port forwarding is functioning as expected.
+- The data pipeline from syslog (/var/log/auth.log) to the Splunk index is operational.
 
 ### Host - splunk-server VM
 ![image](https://github.com/user-attachments/assets/8b2f88b3-05d1-4f19-a59f-cdca0269b93a)
@@ -90,57 +99,5 @@ Sourcetypes: Classification of data
 ## 🔗 Author
 
 [Hafiz Daud](https://www.linkedin.com/in/muhdhafizdaud/)
-
-
-
-
-
-
-
-
-1. Splunk Enterprise Setup & Login via Host Browser
-Displays the sequence of launching the web interface after boot and login.
-
-Splunk Web UI is accessible from the host browser.
-
-Port forwarding is working (127.0.0.1:8000).
-
-Admin credentials were successfully used.
-
-
-2. Splunk Web Interface – Successful Login & Log Ingestion Verified
-This confirms:
-
-Test logs were successfully ingested into Splunk.
-
-Ingested events are searchable via the Splunk UI.
-
-Port forwarding is functioning as expected.
-
-The data pipeline from syslog (/var/log/auth.log) to the Splunk index is operational.
-
-![Log Ingestion](screenshots/Log Ingestion in Splunk UI Successful.jpg)
-
-3. CLI – Log & Port Monitoring
-Verified port 8000 is open and Splunk is listening.
-
-Confirmed logs were ingested using tail and logger.
-
-
-4. Host – splunk-server VM
-Shows that Splunk recognizes the VM as a data source.
-
-![Host – splunk-server](screenshots/Host - splunk-server VM.jpg)
-
-5. Source – /var/log/auth.log
-Validated the log file being ingested.
-
-![Source](screenshots/Host - var log auth.jpg)
-
-6. Sourcetype – syslog
-Classified log type in Splunk UI.
-
-![Sourcetype](screenshots/Source - syslog.jpg)
-
 
 
