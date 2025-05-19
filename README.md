@@ -15,10 +15,10 @@ This home lab sets up Splunk Enterprise on Ubuntu Server using VirtualBox. It si
 
 ## 📸 Screenshots
 
-### Setup UFW Rules Configured
-![UFW CLI Rules](![3  splunk-cli-log-sim png](https://github.com/user-attachments/assets/db258e74-0332-4c1c-a9f2-6d30b075194a)
+### Splunk-cli-log-sim
+![splunk-cli-log-sim png](https://github.com/user-attachments/assets/db258e74-0332-4c1c-a9f2-6d30b075194a)
 
-### Login on local 
+### Login on local UI
 ![image](https://github.com/user-attachments/assets/a67efd82-456d-49a7-b37c-487ecd2bca81)
 
 ### Log Ingestion in Splunk UI Successful!
