@@ -47,8 +47,9 @@ To enable smooth workflow and local web access:
   index=* source="/var/log/auth.log"
 
 
-## ```
-Port Forwarding Setup
+## 
+```
+## Port Forwarding Setup
 +------------------------+      +------------------------------+
 | Host (Windows)         |      | Ubuntu Server VM (Splunk)   |
 |                        |      |                              |
