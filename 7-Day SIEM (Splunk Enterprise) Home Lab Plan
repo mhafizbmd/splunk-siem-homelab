@@ -146,3 +146,7 @@ This plan supports real-world analyst workflows while aligning directly with the
 - Simulated data is generated via `logger` in Ubuntu
 - All key logs ingested from `/var/log/auth.log`
 - Visual documentation placed under `/screenshots` in the GitHub repo
+
+## 🔗 Author
+
+[Hafiz Daud](https://www.linkedin.com/in/muhdhafizdaud/)
