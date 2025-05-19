@@ -58,12 +58,3 @@ Port Forwarding Setup
 ```
 
 
-
-Port Forwarding Setup
-+------------------------+        +------------------------------+
-|      Host (Windows)    |        |    Ubuntu Server VM (Splunk) |
-|                        |        |                              |
-| PowerShell + Browser   | <----> |     NAT Interface            |
-|                        | 2222→22| - SSH                        |
-| 127.0.0.1:8000         | <----> | - Splunk Web UI (8000)       |
-+------------------------+        +------------------------------+
