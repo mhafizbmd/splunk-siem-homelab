@@ -47,7 +47,7 @@ To enable smooth workflow and local web access:
   index=* source="/var/log/auth.log"
 
 
-## 
+
 ```
 ## Port Forwarding Setup
 +------------------------+      +------------------------------+
@@ -58,5 +58,50 @@ To enable smooth workflow and local web access:
 | 127.0.0.1:8000         | <--> | Splunk Web UI (8000)         |
 +------------------------+      +------------------------------+
 ```
+Screenshots
+1. Splunk Enterprise Setup & Login via Host Browser
+Displays the sequence of launching the web interface after boot and login.
+
+Splunk Web UI is accessible from the host browser.
+
+Port forwarding is working (127.0.0.1:8000).
+
+Admin credentials were successfully used.
+
+
+2. Splunk Web Interface – Successful Login & Log Ingestion Verified
+This confirms:
+
+Test logs were successfully ingested into Splunk.
+
+Ingested events are searchable via the Splunk UI.
+
+Port forwarding is functioning as expected.
+
+The data pipeline from syslog (/var/log/auth.log) to the Splunk index is operational.
+
+![Log Ingestion](screenshots/Log Ingestion in Splunk UI Successful.jpg)
+
+3. CLI – Log & Port Monitoring
+Verified port 8000 is open and Splunk is listening.
+
+Confirmed logs were ingested using tail and logger.
+
+
+4. Host – splunk-server VM
+Shows that Splunk recognizes the VM as a data source.
+
+![Host – splunk-server](screenshots/Host - splunk-server VM.jpg)
+
+5. Source – /var/log/auth.log
+Validated the log file being ingested.
+
+![Source](screenshots/Host - var log auth.jpg)
+
+6. Sourcetype – syslog
+Classified log type in Splunk UI.
+
+![Sourcetype](screenshots/Source - syslog.jpg)
+
 
 
