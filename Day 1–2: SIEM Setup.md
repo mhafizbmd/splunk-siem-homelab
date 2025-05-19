@@ -63,17 +63,18 @@ To enable smooth workflow and local web access:
 ### 1.Splunk-cli-log-sim
 ![image](https://github.com/user-attachments/assets/db258e74-0332-4c1c-a9f2-6d30b075194a)
 
+
 ### 2.Login on local UI
 ![Splunk Enterprise Setup & Login via host](screenshots/Splunk%20Enterprise%20Setup%20%26%20Login%20via%20host.png)
-
 ![image](https://github.com/user-attachments/assets/a67efd82-456d-49a7-b37c-487ecd2bca81)
+![Splunk](screenshots/Splunk%20.jpg)
 
-## Screenshot: Splunk Setup via Host Browser
+Displays the sequence of launching the web interface after boot and login.
+- Splunk Web UI is accessible from the host browser.
+- Port forwarding is working (127.0.0.1:8000).
+- Admin credentials were successfully used.
 
-![Splunk Setup](screenshots/Splunk%20Enterprise%20Setup%20%26%20Login%20via%20host.png)
-
-
-### Log Ingestion in Splunk UI Successful!
+### 3.Log Ingestion in Splunk UI Successful!
 ![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
 
 ### Host - splunk-server VM
