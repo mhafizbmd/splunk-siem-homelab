@@ -60,11 +60,18 @@ To enable smooth workflow and local web access:
 ```
 ## 📸 Screenshots
 
-### Splunk-cli-log-sim
+### 1.Splunk-cli-log-sim
 ![image](https://github.com/user-attachments/assets/db258e74-0332-4c1c-a9f2-6d30b075194a)
 
-### Login on local UI
+### 2.Login on local UI
+![Splunk Enterprise Setup & Login via host](screenshots/Splunk%20Enterprise%20Setup%20%26%20Login%20via%20host.png)
+
 ![image](https://github.com/user-attachments/assets/a67efd82-456d-49a7-b37c-487ecd2bca81)
+
+## Screenshot: Splunk Setup via Host Browser
+
+![Splunk Setup](screenshots/Splunk%20Enterprise%20Setup%20%26%20Login%20via%20host.png)
+
 
 ### Log Ingestion in Splunk UI Successful!
 ![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
