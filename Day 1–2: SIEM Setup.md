@@ -93,8 +93,4 @@ Sourcetypes: Classification of data
 
 
 
-## 🔗 Author
-
-[Hafiz Daud](https://www.linkedin.com/in/muhdhafizdaud/)
-
 
