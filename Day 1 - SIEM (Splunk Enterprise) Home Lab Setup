@@ -58,54 +58,30 @@ To enable smooth workflow and local web access:
 +-----------------------+           +---------------------------+
 
 ## 📸 Screenshots
-## Screenshots
 
-### 1. Splunk CLI – Log & Port Monitoring
-This screenshot shows the CLI interface of the Ubuntu Server where Splunk is running. It confirms:
-- Splunk service is active.
-- Port 8000 is open and listening.
-- Log events were simulated using the `logger` command.
-
-![CLI – Port & Log Check](screenshots/ssh-cli-log-sim.png.jpg)
-![CLI](screenshots/ssh-cli-log-sim.jpg)
-
-![CLI – Port & Log Check](screenshots/ssh-cli-log-sim.jpg)
-
-
-
-
----
-
-### 2. Splunk Web Interface – Successful Login
+### 1. Splunk Enterprise Setup & Login via Host Browser
+Displays the sequence of launching the web interface after boot and login
 This confirms:
 - Splunk Web UI is accessible from the host browser.
 - Port forwarding is working (127.0.0.1:8000).
 - Admin credentials were successfully used.
 
-![Splunk Login](screenshots/Splunk.jpg)
+---
+
+### 2. Splunk Web Interface – Successful Login & Log Ingestion Verified
+This confirms:
+- Test logs were successfully ingested into Splunk.
+- Ingested events are searchable via the Splunk UI.
+- Port forwarding is functioning as expected.
+- The data pipeline from syslog (/var/log/auth.log) to the Splunk index is operational.
+![Splunk UI – Log Ingestion Verified](screenshots/Splunk.jpg)
+
+
+-
+
 
 ---
 
-### 3. Splunk Enterprise Setup & Login via Host Browser
-Displays the sequence of launching the web interface after boot and login.
-
-![Splunk Setup via Host](screenshots/Splunk\ Enterprise\ Setup\ \&\ Login\ via\ host.png)
-
----
-
-### 4. Firewall (UFW) – Secure & Show Control
-This output verifies the firewall was enabled and port access was controlled properly:
-- Port 22 (SSH) and 8000 (Splunk Web) are explicitly allowed.
-- Default policy denies all incoming traffic.
-
-![Firewall Rules](screenshots/Firewall\ \(UFW\)\ \–\ Secure\ \&\ Show\ Control.jpg)
-
----
-
-### 5. Network Visibility & Port Monitoring
-Used `netstat` to validate open ports and confirm Splunk services were bound correctly.
-
-![Network Visibility](screenshots/Network\ Visibility\ \&\ Port\ Monitoring.jpg)
 
 
 
