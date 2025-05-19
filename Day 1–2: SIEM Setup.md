@@ -74,7 +74,7 @@ This confirms:
 - Port forwarding is working correctly (`127.0.0.1:8000`).
 - Admin credentials were successfully used to log in.
 
-### 3.Log Ingestion in Splunk UI Successful!
+### 3.Log Ingestion in Splunk UI
 ![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
 ### Splunk Web Interface – Successful Login & Log Ingestion Verified
 This confirms:
