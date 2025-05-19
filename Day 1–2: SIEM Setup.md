@@ -63,12 +63,10 @@ To enable smooth workflow and local web access:
 ### 1.Splunk-cli-log-sim
 ![image](https://github.com/user-attachments/assets/db258e74-0332-4c1c-a9f2-6d30b075194a)
 
-
 ### 2.Login on local UI
 ![Splunk Enterprise Setup & Login via host](screenshots/Splunk%20Enterprise%20Setup%20%26%20Login%20via%20host.png)
 ![image](https://github.com/user-attachments/assets/a67efd82-456d-49a7-b37c-487ecd2bca81)
 ![Splunk](screenshots/Splunk%20.jpg)
-
 ### Splunk Web Interface – Boot to Login Workflow
 Displays the sequence from launching the Splunk Web interface after boot to a successful login.
 This confirms:
@@ -76,10 +74,9 @@ This confirms:
 - Port forwarding is working correctly (`127.0.0.1:8000`).
 - Admin credentials were successfully used to log in.
 
-
 ### 3.Log Ingestion in Splunk UI Successful!
 ![image](https://github.com/user-attachments/assets/ba3c2ce8-c246-42d7-9511-c1a515ad5dab)
-## Splunk Web Interface – Successful Login & Log Ingestion Verified
+### Splunk Web Interface – Successful Login & Log Ingestion Verified
 This confirms:
 - Test logs were successfully ingested into Splunk.
 - Ingested events are searchable via the Splunk UI.
