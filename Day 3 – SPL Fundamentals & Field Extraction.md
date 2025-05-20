@@ -126,14 +126,16 @@ Take screenshots of:
 ### Basic Search for "Failed password"
 ![image](https://github.com/user-attachments/assets/92053250-7353-40a3-997e-4db32dd9d4e8)
 ### Advanced SPL Search (Aggregation) 
-1) To count login failures per IP/user. Helps detect brute force sources
-index=main "Failed password" 
-| rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" 
-| stats count by src_ip
-2) 
+- Goal: To count login failures per IP/user. Helps detect brute force sources
+Query: index=main "Failed password" | rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" | stats count by src_ip
+#### Regex Breakdown:
+"from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 
-![image](https://github.com/user-attachments/assets/66d75fd7-df89-4ba0-b0e7-7b53c8787a95)
-
+- "from " = literal text match (the word "from" and space)
+- (?<src_ip>...) = names the extracted field "src_ip"
+- \d+ = matches 1 or more digits (0-9)
+- \. = matches a literal dot (.)
+- Pattern repeats 4 times to match IPv4 format (1.2.3.4)
 ![image](https://github.com/user-attachments/assets/a38a156a-206a-44d5-b04a-e8ffdd763c2a)
 
 
