@@ -24,8 +24,7 @@ Training Reference:
 ## Comprehensive Steps
 
 ### ✅ Part 1: Explore Ingested Logs in Splunk
-- Log into Splunk Web:
-Access via: http://127.0.0.1:8000
+- Log into Splunk Web: Access via: http://127.0.0.1:8000
 - Use your admin credentials set during user-seed.conf setup.
 - Navigate to Search & Reporting
 - App > Search & Reporting > New Search
@@ -38,17 +37,16 @@ index=* OR index=main
 
 ### ✅ Part 2: Learn SPL Basics
 - Search by Source:
-- spl
-- Copy
-- Edit
-- source="/var/log/auth.log"
+spl
+Copy
+Edit
+source="/var/log/auth.log"
 - Filter Specific Keywords:
-- spl
-- Copy
-- Edit
-- source="/var/log/auth.log" "Failed password"
-
-6. Add Time Filters
+spl
+Copy
+Edit
+source="/var/log/auth.log" "Failed password"
+- Add Time Filters
 Use the time range selector in the top right (e.g., Last 60 minutes).
 
 ### ✅ Part 3: Understand Fields: host, source, sourcetype
@@ -128,6 +126,9 @@ Take screenshots of:
 ### Basic Search for "Failed password"
 ![image](https://github.com/user-attachments/assets/92053250-7353-40a3-997e-4db32dd9d4e8)
 ### Count by IP Address
+To extract the IP and count how many failed attempts came from each:
+- rex: extracts the IP using regex into a field called src_ip
+- stats count by src_ip: gives you a count of events per IP.
 ![image](https://github.com/user-attachments/assets/92771e2a-b6ad-4e4b-880e-8b272bd0973b)
 
 
