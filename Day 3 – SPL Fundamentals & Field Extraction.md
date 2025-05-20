@@ -133,17 +133,12 @@ Query: index=main "Failed password" | rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" |
 - (?<src_ip>...) = names the extracted field "src_ip"
 - \d+ = matches 1 or more digits (0-9)
 - \. = matches a literal dot (.)
-- Pattern repeats 4 times to match IPv4 format (1.2.3.4)
-  
+- Pattern repeats 4 times to match IPv4 format (1.2.3.4) 
+
+![image](https://github.com/user-attachments/assets/92771e2a-b6ad-4e4b-880e-8b272bd0973b)
 ![image](https://github.com/user-attachments/assets/a38a156a-206a-44d5-b04a-e8ffdd763c2a)
 
 
-### Count by IP Address
-To extract the IP and count how many failed attempts came from each:
-1) rex: extracts the IP using regex into a field called src_ip
-2) stats count by src_ip: gives you a count of events per IP.
-3) To note: For (?<src_ip>\d+\.\d+\.\d+\.\d+)  /d = matched any digit (0-9) | + = Matches 1 or more of the preceding character (eg; 192.168.1.1)
-![image](https://github.com/user-attachments/assets/92771e2a-b6ad-4e4b-880e-8b272bd0973b)
 
 
 
