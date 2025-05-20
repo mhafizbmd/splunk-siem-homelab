@@ -128,7 +128,13 @@ Take screenshots of:
 ![image](https://github.com/user-attachments/assets/6e8e9c54-1331-4960-aabe-380c4a9c939e)
 ### Splunk Search for simulated logs
 ![image](https://github.com/user-attachments/assets/044ecee6-7bcf-4e90-9af5-41b205a7d5eb)
+### Basic Search for "Failed password"
+![image](https://github.com/user-attachments/assets/92053250-7353-40a3-997e-4db32dd9d4e8)
+### Count by IP Address
+![image](https://github.com/user-attachments/assets/92771e2a-b6ad-4e4b-880e-8b272bd0973b)
 
 
-Update your README.md with today's summary and image references
+
+
+
 
