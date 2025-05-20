@@ -125,6 +125,16 @@ Take screenshots of:
 ![image](https://github.com/user-attachments/assets/044ecee6-7bcf-4e90-9af5-41b205a7d5eb)
 ### Basic Search for "Failed password"
 ![image](https://github.com/user-attachments/assets/92053250-7353-40a3-997e-4db32dd9d4e8)
+### Advanced SPL Search (Aggregation) 
+Goal: To count login failures per IP/user
+![image](https://github.com/user-attachments/assets/691213de-f936-4187-940d-3b4dff107cc6)
+
+| rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" 
+![image](https://github.com/user-attachments/assets/66d75fd7-df89-4ba0-b0e7-7b53c8787a95)
+- Count login failures per IP/user. Helps detect brute force sources
+![image](https://github.com/user-attachments/assets/a38a156a-206a-44d5-b04a-e8ffdd763c2a)
+
+
 ### Count by IP Address
 To extract the IP and count how many failed attempts came from each:
 1) rex: extracts the IP using regex into a field called src_ip
