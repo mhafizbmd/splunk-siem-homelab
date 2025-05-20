@@ -127,8 +127,9 @@ Take screenshots of:
 ![image](https://github.com/user-attachments/assets/92053250-7353-40a3-997e-4db32dd9d4e8)
 ### Count by IP Address
 To extract the IP and count how many failed attempts came from each:
-- rex: extracts the IP using regex into a field called src_ip
-- stats count by src_ip: gives you a count of events per IP.
+1) rex: extracts the IP using regex into a field called src_ip
+2) stats count by src_ip: gives you a count of events per IP.
+3) To note: For (?<src_ip>\d+\.\d+\.\d+\.\d+)  /d = matched any digit (0-9) | + = Matches 1 or more of the preceding character (eg; 192.168.1.1)
 ![image](https://github.com/user-attachments/assets/92771e2a-b6ad-4e4b-880e-8b272bd0973b)
 
 
