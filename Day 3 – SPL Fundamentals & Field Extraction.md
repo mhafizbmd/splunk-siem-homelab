@@ -9,6 +9,11 @@ Actions:
 - Extracted attacker IPs and usernames using `rex`
 - Documented results with screenshots
 
+Goal:
+- Understand and use core SPL commands to analyze logs.
+- Extract meaningful fields from raw log data.
+- Build a foundation for threat detection and correlation.
+
 Tools Used:
 - Splunk Web UI
 - SPL (Search Processing Language)
@@ -16,20 +21,11 @@ Tools Used:
 Training Reference:
 - Splunk Search Fundamentals I (via Splunk Education)
 
-
 ## Comprehensive Steps
-Day 3: SPL Fundamentals & Field Extraction
-🎯 Goal:
-Understand and use core SPL commands to analyze logs.
-
-Extract meaningful fields from raw log data.
-
-Build a foundation for threat detection and correlation.
 
 ✅ Part 1: Explore Ingested Logs in Splunk
 1. Log into Splunk Web:
 Access via: http://127.0.0.1:8000
-
 Use your admin credentials set during user-seed.conf setup.
 
 2. Navigate to Search & Reporting
@@ -48,11 +44,13 @@ spl
 Copy
 Edit
 source="/var/log/auth.log"
+
 5. Filter Specific Keywords:
 spl
 Copy
 Edit
 source="/var/log/auth.log" "Failed password"
+
 6. Add Time Filters
 Use the time range selector in the top right (e.g., Last 60 minutes).
 
@@ -122,17 +120,15 @@ Edit
 index=* source="/var/log/auth.log" | rex "user (?<username>\w+)" | table _time, username, message
 ✅ Part 7: Document Your Work
 Take screenshots of:
+- Raw log search
+- Table view with filtered fields
+- Successful field extraction using rex
 
-Raw log search
-
-Table view with filtered fields
-
-Successful field extraction using rex
-
-Save and organize:
-
-/screenshots/Day3/
+### Simulated some "SSH brute force", "SSH Login Success" and "Reconnaisance-like Attempts" logs ###
 ![image](https://github.com/user-attachments/assets/6e8e9c54-1331-4960-aabe-380c4a9c939e)
-Simulated some "SSH brute force", "SSH Login Success" and "Reconnaisance-like Attempts" logs 
+### Splunk Search for simulated logs
+![image](https://github.com/user-attachments/assets/044ecee6-7bcf-4e90-9af5-41b205a7d5eb)
+
+
 Update your README.md with today's summary and image references
 
