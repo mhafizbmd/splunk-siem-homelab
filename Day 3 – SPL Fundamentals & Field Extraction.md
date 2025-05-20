@@ -126,12 +126,14 @@ Take screenshots of:
 ### Basic Search for "Failed password"
 ![image](https://github.com/user-attachments/assets/92053250-7353-40a3-997e-4db32dd9d4e8)
 ### Advanced SPL Search (Aggregation) 
-Goal: To count login failures per IP/user
-![image](https://github.com/user-attachments/assets/691213de-f936-4187-940d-3b4dff107cc6)
-
+1) To count login failures per IP/user. Helps detect brute force sources
+index=main "Failed password" 
 | rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" 
+| stats count by src_ip
+2) 
+
 ![image](https://github.com/user-attachments/assets/66d75fd7-df89-4ba0-b0e7-7b53c8787a95)
-- Count login failures per IP/user. Helps detect brute force sources
+
 ![image](https://github.com/user-attachments/assets/a38a156a-206a-44d5-b04a-e8ffdd763c2a)
 
 
