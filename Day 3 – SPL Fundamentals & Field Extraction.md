@@ -128,14 +128,13 @@ Take screenshots of:
 ### Advanced SPL Search (Aggregation) 
 - Goal: To count login failures per IP/user. Helps detect brute force sources
 Query: index=main "Failed password" | rex "from (?<src_ip>\d+\.\d+\.\d+\.\d+)" | stats count by src_ip
-#### Regex Breakdown:
-"from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
-
+#### Regex Breakdown: "from (?<src_ip>\d+\.\d+\.\d+\.\d+)"
 - "from " = literal text match (the word "from" and space)
 - (?<src_ip>...) = names the extracted field "src_ip"
 - \d+ = matches 1 or more digits (0-9)
 - \. = matches a literal dot (.)
 - Pattern repeats 4 times to match IPv4 format (1.2.3.4)
+  
 ![image](https://github.com/user-attachments/assets/a38a156a-206a-44d5-b04a-e8ffdd763c2a)
 
 
