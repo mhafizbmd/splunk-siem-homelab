@@ -17,3 +17,121 @@ Training Reference:
 - Splunk Search Fundamentals I (via Splunk Education)
 
 
+## Comprehensive Steps
+Day 3: SPL Fundamentals & Field Extraction
+🎯 Goal:
+Understand and use core SPL commands to analyze logs.
+
+Extract meaningful fields from raw log data.
+
+Build a foundation for threat detection and correlation.
+
+✅ Part 1: Explore Ingested Logs in Splunk
+1. Log into Splunk Web:
+Access via: http://127.0.0.1:8000
+
+Use your admin credentials set during user-seed.conf setup.
+
+2. Navigate to Search & Reporting
+App > Search & Reporting > New Search
+
+3. Run a Basic Search:
+spl
+Copy
+Edit
+index=* OR index=main
+This shows all events — a good place to confirm ingestion.
+
+✅ Part 2: Learn SPL Basics
+4. Search by Source:
+spl
+Copy
+Edit
+source="/var/log/auth.log"
+5. Filter Specific Keywords:
+spl
+Copy
+Edit
+source="/var/log/auth.log" "Failed password"
+6. Add Time Filters
+Use the time range selector in the top right (e.g., Last 60 minutes).
+
+✅ Part 3: Understand Fields: host, source, sourcetype
+These are Splunk’s default fields:
+
+Field	What it Represents
+host	Name/IP of the system sending logs
+source	The file/device logs are ingested from
+sourcetype	Format/type of data (e.g., syslog, csv, etc.)
+
+Run this:
+spl
+Copy
+Edit
+index=* | stats count by host, source, sourcetype
+This shows which logs are coming from where.
+
+✅ Part 4: Field Extraction and Filtering
+7. Explore Automatic Fields
+On the left pane, Splunk lists fields it auto-detects.
+
+Click any field (e.g., user, pid, message) to filter logs.
+
+8. Use fields Command
+spl
+Copy
+Edit
+index=* source="/var/log/auth.log" | fields _time, host, message
+9. Table View:
+spl
+Copy
+Edit
+index=* source="/var/log/auth.log" | table _time, user, message
+Use this to structure logs into a readable format.
+
+✅ Part 5: Start Using SPL Filters
+10. Search for SSH login failures:
+spl
+Copy
+Edit
+source="/var/log/auth.log" "Failed password"
+11. Show top usernames that failed login:
+spl
+Copy
+Edit
+source="/var/log/auth.log" "Failed password" | top user
+12. Count failed attempts by IP:
+spl
+Copy
+Edit
+source="/var/log/auth.log" "Failed password" | rex "from (?<ip>\d{1,3}(\.\d{1,3}){3})" | stats count by ip
+This uses rex to extract IP addresses from the raw message.
+
+✅ Part 6: Field Extraction with rex & regex
+13. Use rex for custom field extraction
+spl
+Copy
+Edit
+index=* source="/var/log/auth.log" | rex "from (?<attacker_ip>\d{1,3}(\.\d{1,3}){3})"
+Now you can use attacker_ip in further analysis.
+
+14. Extract username from logs:
+spl
+Copy
+Edit
+index=* source="/var/log/auth.log" | rex "user (?<username>\w+)" | table _time, username, message
+✅ Part 7: Document Your Work
+Take screenshots of:
+
+Raw log search
+
+Table view with filtered fields
+
+Successful field extraction using rex
+
+Save and organize:
+
+/screenshots/Day3/
+
+Update your README.md with today's summary and image references
+
