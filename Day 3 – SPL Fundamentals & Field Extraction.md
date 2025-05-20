@@ -23,38 +23,35 @@ Training Reference:
 
 ## Comprehensive Steps
 
-✅ Part 1: Explore Ingested Logs in Splunk
-1. Log into Splunk Web:
+### ✅ Part 1: Explore Ingested Logs in Splunk
+- Log into Splunk Web:
 Access via: http://127.0.0.1:8000
-Use your admin credentials set during user-seed.conf setup.
-
-2. Navigate to Search & Reporting
-App > Search & Reporting > New Search
-
-3. Run a Basic Search:
+- Use your admin credentials set during user-seed.conf setup.
+- Navigate to Search & Reporting
+- App > Search & Reporting > New Search
+- Run a Basic Search:
 spl
 Copy
 Edit
 index=* OR index=main
-This shows all events — a good place to confirm ingestion.
+- This shows all events — a good place to confirm ingestion.
 
-✅ Part 2: Learn SPL Basics
-4. Search by Source:
-spl
-Copy
-Edit
-source="/var/log/auth.log"
-
-5. Filter Specific Keywords:
-spl
-Copy
-Edit
-source="/var/log/auth.log" "Failed password"
+### ✅ Part 2: Learn SPL Basics
+- Search by Source:
+- spl
+- Copy
+- Edit
+- source="/var/log/auth.log"
+- Filter Specific Keywords:
+- spl
+- Copy
+- Edit
+- source="/var/log/auth.log" "Failed password"
 
 6. Add Time Filters
 Use the time range selector in the top right (e.g., Last 60 minutes).
 
-✅ Part 3: Understand Fields: host, source, sourcetype
+### ✅ Part 3: Understand Fields: host, source, sourcetype
 These are Splunk’s default fields:
 
 Field	What it Represents
@@ -69,7 +66,7 @@ Edit
 index=* | stats count by host, source, sourcetype
 This shows which logs are coming from where.
 
-✅ Part 4: Field Extraction and Filtering
+### ✅ Part 4: Field Extraction and Filtering
 7. Explore Automatic Fields
 On the left pane, Splunk lists fields it auto-detects.
 
@@ -87,7 +84,7 @@ Edit
 index=* source="/var/log/auth.log" | table _time, user, message
 Use this to structure logs into a readable format.
 
-✅ Part 5: Start Using SPL Filters
+### ✅ Part 5: Start Using SPL Filters
 10. Search for SSH login failures:
 spl
 Copy
@@ -105,7 +102,7 @@ Edit
 source="/var/log/auth.log" "Failed password" | rex "from (?<ip>\d{1,3}(\.\d{1,3}){3})" | stats count by ip
 This uses rex to extract IP addresses from the raw message.
 
-✅ Part 6: Field Extraction with rex & regex
+### ✅ Part 6: Field Extraction with rex & regex
 13. Use rex for custom field extraction
 spl
 Copy
@@ -118,7 +115,7 @@ spl
 Copy
 Edit
 index=* source="/var/log/auth.log" | rex "user (?<username>\w+)" | table _time, username, message
-✅ Part 7: Document Your Work
+### ✅ Part 7: Document Your Work
 Take screenshots of:
 - Raw log search
 - Table view with filtered fields
