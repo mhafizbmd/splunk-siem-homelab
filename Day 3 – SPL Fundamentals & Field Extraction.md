@@ -132,6 +132,7 @@ Successful field extraction using rex
 Save and organize:
 
 /screenshots/Day3/
-
+![image](https://github.com/user-attachments/assets/6e8e9c54-1331-4960-aabe-380c4a9c939e)
+Simulated some "SSH brute force", "SSH Login Success" and "Reconnaisance-like Attempts" logs 
 Update your README.md with today's summary and image references
 
