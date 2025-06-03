@@ -1,4 +1,5 @@
 # 7-Day SIEM (Splunk Enterprise) Home Lab Plan  
+**Curated with the help of chatGPT to summarise**
 
 [![Splunk](https://img.shields.io/badge/Splunk-Enterprise-green.svg)](https://www.splunk.com/)  
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-24.04-orange.svg)](https://ubuntu.com/)  
@@ -125,20 +126,21 @@ Access:
 - **Day 7: Wrap-Up, Final Report & Sharing**  
   Complete any remaining Splunk eLearning/BTL1 modules, write a final summary, organize GitHub subdirectories (`day1/` … `day7/`), and share results.
 
-> Each “Day X” folder contains:
-> - A `README.md` with detailed commands and explanations  
-> - `/configs` for Splunk configuration files (e.g., `inputs.conf`, `tags.conf`)  
-> - `/screenshots` for relevant images  
-> - Any scripts or `.conf` snippets used  
 
----
+## Notes:
 
-Author
+- Lab conducted alongside:
+  - Splunk Learning Course: https://education.splunk.com/
+  - Security Blue Team BTL1 Certification
 
-Hafiz Daud
+- VM and host communicate via VirtualBox NAT:
+  - Port 2222 → 22 for SSH
+  - Port 8000 → 8000 for Splunk Web access
 
+- Simulated data is generated via `logger` in Ubuntu
+- All key logs ingested from `/var/log/auth.log`
+- Visual documentation placed under `/screenshots` in the GitHub repo
 
+## 🔗 Author
 
-
-
-
+[Hafiz Daud](https://www.linkedin.com/in/muhdhafizdaud/)
