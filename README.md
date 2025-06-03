@@ -18,10 +18,8 @@ A hands-on 7-day SIEM home lab using **Splunk Enterprise** on an **Ubuntu Server
 3. [Lab Goals](#lab-goals)  
 4. [Lab Setup Summary](#lab-setup-summary)  
 5. [7-Day Plan (High-Level)](#7-day-plan-high-level)  
-6. [Repository Structure](#repository-structure)  
-7. [How to Replicate](#how-to-replicate)  
-8. [Future Enhancements](#future-enhancements)  
-9. [Author](#author)
+6. [Notes](#notes)
+7. [Author](#author)
 
 ---
 
