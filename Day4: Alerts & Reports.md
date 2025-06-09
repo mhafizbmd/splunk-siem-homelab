@@ -1,6 +1,27 @@
-# **Day 4: Alerts, Reports and Tagging**
+# **Day 4: Alerts and Reports**
 
-On Day 4, we simulated SSH failures, created a scheduled report, built a real-time alert, and tested it. Below are the detailed steps for Parts 1–5.
+On Day 4, we will be simulating SSH failures, created a scheduled report, built a real-time alert, and tested it.
+
+### Actions
+- **Event type**: defined `ssh_failed_login` to capture all “Failed password” SSH events  
+  _(search: `index=main sourcetype="linux_secure" "Failed password"`)_
+- **Scheduled report**: saved “Daily SSH Failures” to run at 00:00 daily, showing the count of failed logins over the past 24 hours  
+- **Real-time alert**: created “SSH Failure Threshold” (trigger when > 5 failures in 5 min) with email action  
+- **Test run**: simulated 10 failed SSH attempts via `logger` in the VM to validate alert firing  
+- **Verification**: confirmed the alert under **Activity → Triggered Alerts** in Splunk Web  
+- **Documentation**: updated `Day4: Alerts, Reports & Tagging.md` on GitHub with these configs and outcomes  
+
+### Lessons I learnt for today
+- Automated reports give a quick daily snapshot—no manual searches needed  
+- Threshold tuning is crucial: too low → noise; too high → missed spikes  
+- Real-time alerts work great, but always test with simulated data first  
+- Clear naming (event types & alerts) pays off when scaling to dashboards later  
+
+
+
+
+### Comprehensive Steps
+
 1. Verify Data Ingestion
 
     SSH into the Ubuntu VM (if not already):
