@@ -1,22 +1,20 @@
 # **Day 5: Dashboards, Visualization & Tagging**
-
-On Day 4, we will be simulating SSH failures, created a scheduled report, built a real-time alert, and tested it.
-
 ### Actions
-- **Event type**: defined `ssh_failed_login` to capture all “Failed password” SSH events  
-  _(search: `index=main sourcetype="linux_secure" "Failed password"`)_
-- **Scheduled report**: saved “Daily SSH Failures” to run at 00:00 daily, showing the count of failed logins over the past 24 hours  
-- **Real-time alert**: created “SSH Failure Threshold” (trigger when > 5 failures in 5 min) with email action  
-- **Test run**: simulated 10 failed SSH attempts via `logger` in the VM to validate alert firing  
-- **Verification**: confirmed the alert under **Activity → Triggered Alerts** in Splunk Web  
-- **Documentation**: updated `Day4: Alerts, Reports & Tagging.md` on GitHub with these configs and outcomes  
+- Spun up a new dashboard **SSH Login Insights** with two panels:
+  - **SSH Events per Hour** (hourly count of all SSH activity)  
+  - **Top 10 Failed Login IPs** (bar chart of most frequent failure sources)  
+- Enabled **auto-refresh** (1 min) so data stays live without manual reload  
+- Defined a new event type **ssh_success_login** to group “Accepted password” events  
+- Tagged `eventtype=ssh_success_login` for easy lookup in future searches  
 
-### Lessons I learnt for today
-- Automated reports give a quick daily snapshot—no manual searches needed  
-- Threshold tuning is crucial: too low → noise; too high → missed spikes  
-- Real-time alerts work great, but always test with simulated data first  
-- Clear naming (event types & alerts) pays off when scaling to dashboards later  
-
+### Lessons learned
+- Dashboards turn raw searches into an easy at-a-glance monitoring tool, use the appropriate panel type 
+- Unable to use Search query below as there were no IP field
+  - index=main sourcetype="linux_secure" "Failed password" | top limit=10 src_ip AS “Source IP”
+- Refined Search query to extract IP
+  - index=main sourcetype="linux_secure" "Failed password" | rex field=_raw "from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3})" | stats count AS Failures by src_ip | sort -Failures | head 10 | rename src_ip AS "Source IP"
+- Tagging both failures and successes in dashboard makes comparisons and ratios easier   
+- Starting with simple visuals paves the way for more advanced panels later
 
 
 
@@ -76,3 +74,28 @@ Test Your Tagging
 Export Dashboard Definition
 • Dashboards → ⋮ on SSH Login Insights → Export to JSON
 • Save as ssh_login_insights.json
+
+### Screenshots
+- #### Dashboards, Visualization
+![image](https://github.com/user-attachments/assets/e982d22f-6412-4e9b-9479-55bed04190af)
+![image](https://github.com/user-attachments/assets/516be35b-18c0-43b7-a3bc-a454d34b8f5d)
+
+index=main sourcetype="linux_secure" "Failed password" | top limit=10 src_ip AS “Source IP”  No Result![image](https://github.com/user-attachments/assets/1f562155-402f-4282-916e-0e482ea5a51c) 
+
+Checked the events, it was working. Issue likely due to there being no IP in the field on the left ![image](https://github.com/user-attachments/assets/2f87c69d-681f-4a64-9634-cbcbe3881263)
+Use a regular expression to pull the IP out of _raw each time its run. rex grabs whatever looks like 1.2.3.4 after the word “from” and saves it as src_ip while stats count by src_ip gives the top failure sources![image](https://github.com/user-attachments/assets/dd77efe1-3604-44c2-8711-9ae266731158)
+
+Edited the Search query for "Top 10 Failed Login IPs" ![image](https://github.com/user-attachments/assets/82820ff6-5936-4674-ace2-251165c9684c)
+Both Panel![image](https://github.com/user-attachments/assets/4253a026-f9a9-475d-9b3b-5fd9d91517e0)
+- #### Tagging
+Create new event type![image](https://github.com/user-attachments/assets/4996c7a8-2f68-4133-bd18-0d16a7df0d94)
+Create tag and tagging it to the earlier event![image](https://github.com/user-attachments/assets/ca28708f-4ccb-4561-887c-12bdeadbce33)
+ssh_success_login successfully returned password accepted![image](https://github.com/user-attachments/assets/3f495ad0-367d-42f9-8c75-7fd6149edc0a)
+
+
+
+
+
+
+
+
