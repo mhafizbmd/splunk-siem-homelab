@@ -1,6 +1,6 @@
 # **Day 4: Alerts and Reports**
 
-On Day 4, we will be simulating SSH failures, created a scheduled report, built a real-time alert, and tested it.
+On Day 4, we will be simulating SSH failures, created a scheduled report, built a real-time alert, and testing it.
 
 ### Actions
 - **Event type**: defined `ssh_failed_login` to capture all “Failed password” SSH events  
